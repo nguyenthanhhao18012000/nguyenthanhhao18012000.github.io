@@ -8,7 +8,7 @@ document.querySelector("#email-form").addEventListener("submit", function(event)
     console.log(email)
 
     // Make RudderStack Identify Call
-    rudderanalytics.identify(email, { email: email })
+    rudderanalytics.track(email, { email: email })
 
     emailForm.value = ""
 } )
