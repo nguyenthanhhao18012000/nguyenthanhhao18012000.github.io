@@ -103,8 +103,7 @@
         // Sự kiện track khi nhấn nút
         document.getElementById('trackButton').addEventListener('click', function() {
             rudderanalytics.track("Button Clicked", {
-                property1: "Button Value",
-                property2: "Additional Data"
+                name: "Button Value"
             });
             console.log("Event tracked: Button Clicked");
         });
