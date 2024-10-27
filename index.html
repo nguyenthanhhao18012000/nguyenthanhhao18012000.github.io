@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+      <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
   <script type="text/javascript">
 (function() {
@@ -96,17 +99,20 @@
 </script>
 </head>
 <body>
-       <h1>RudderStack Tracking Example</h1>
-    <button id="trackButton">Track Event</button>
+     <section>
+        <form id="email-form" action="submit" class="email-form">
+            <img src="https://uploads-ssl.webflow.com/5f29812d706beb2bf6f62f64/60c146f54f7efa85f37f621e_63515_Rudderstack_Logo%20refresh_Superside-03.svg" loading="lazy" width="214" alt="">
+            <h1>RudderStack in 5 minutes</h1>
+            <div class="email-field">
+                <img src="https://uploads-ssl.webflow.com/5f29812d706beb2bf6f62f64/5f29812d39ddb88db70ecc87_icon-mail.svg" alt="" class="icon-form-input-image">
+                <input type="email" name="email" id="email" placeholder="your@email.com" required>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Sign up for RudderStack!</button>
+            </div>
+        </form>        
+    </section>
 
-    <script>
-        // Sự kiện track khi nhấn nút
-        document.getElementById('trackButton').addEventListener('click', function() {
-            rudderanalytics.track("Button Clicked", {
-                name: "Button Value"
-            });
-            console.log("Event tracked: Button Clicked");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
