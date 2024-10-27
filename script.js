@@ -1,14 +1,17 @@
 // Event listener on the form submit
 document.querySelector("#email-form").addEventListener("submit", function(event){
-    event.preventDefault()
+    // Prevent the default form submission
+    event.preventDefault();
 
-    const emailForm = document.querySelector("#email")
-    const email = emailForm.value
+    // Get the email input element and its value
+    const emailForm = document.querySelector("#email");
+    const email = emailForm.value;
 
-    console.log(email)
+    console.log(email);  // Log the email for debugging
 
     // Make RudderStack Identify Call
-    rudderanalytics.track(email, { email: email })
+    rudderanalytics.track(email, { email: email });
 
-    emailForm.value = ""
-} )
+    // Clear the form input
+    emailForm.value = "";
+});
